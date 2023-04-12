@@ -1,0 +1,22 @@
+body {
+    color: #fff;
+    background-color: #1e1f2b;
+    font-family: "Inter", sans-serif;
+
+    &::-webkit-scrollbar {
+        width: 6px; /* width of the entire scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #181821; /* color of the tracking area */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #313243; /* color of the scroll thumb */
+        border-radius: 1.25rem; /* roundness of the scroll thumb */
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #3a3b4f; /* color of the scroll thumb when hovered */
+    }
+}

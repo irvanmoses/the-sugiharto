@@ -1,0 +1,78 @@
+// COLORS
+$primary: #2ba386;
+$secondary: #a5a5aa;
+
+// MEDIA QUERY
+@mixin px1599 {
+    @media only screen and (max-width: "1598.98px") {
+        @content;
+    }
+}
+@mixin px1440 {
+    @media only screen and (max-width: "1439.98px") {
+        @content;
+    }
+}
+@mixin px1360 {
+    @media only screen and (max-width: "1359.98px") {
+        @content;
+    }
+}
+@mixin px1280 {
+    @media only screen and (max-width: "1279.98px") {
+        @content;
+    }
+}
+@mixin px1200 {
+    @media only screen and (max-width: "1199.98px") {
+        @content;
+    }
+}
+@mixin px1024 {
+    @media only screen and (max-width: "1023.98px") {
+        @content;
+    }
+}
+@mixin px768 {
+    @media only screen and (max-width: "767.98px") {
+        @content;
+    }
+}
+@mixin px576 {
+    @media only screen and (max-width: "575.98px") {
+        @content;
+    }
+}
+@mixin px480 {
+    @media only screen and (max-width: "479.98px") {
+        @content;
+    }
+}
+@mixin px425 {
+    @media only screen and (max-width: "424.98px") {
+        @content;
+    }
+}
+@mixin px375 {
+    @media only screen and (max-width: "374.98px") {
+        @content;
+    }
+}
+@mixin px320 {
+    @media only screen and (max-width: "319.98px") {
+        @content;
+    }
+}
+
+// MEDIA QUERY WIDTH
+@mixin max-w($width) {
+    @media only screen and (max-width: ($width+ "px")) {
+        @content;
+    }
+}
+
+@mixin min-w($width) {
+    @media only screen and (min-width: ($width+ "px")) {
+        @content;
+    }
+}

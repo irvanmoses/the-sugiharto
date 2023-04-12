@@ -1,0 +1,184 @@
+@import "@/styles/helpers";
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 0 15rem 0 15rem;
+    transition: all 0.3s ease-in-out;
+
+    @include px1440 {
+        padding: 0 6rem;
+    }
+
+    @include px1200 {
+        padding: 0 0 0 6rem;
+    }
+
+    @include px1024 {
+        padding: 0 3rem;
+        margin-top: 2rem;
+    }
+
+    @include px768 {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    @include px425 {
+        padding: 0 1.5rem;
+    }
+}
+
+.left,
+.right {
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+
+    @include px768 {
+        width: 100%;
+    }
+}
+
+.left {
+    height: 100%;
+    position: relative;
+
+    @include px768 {
+        margin-bottom: 2rem;
+    }
+
+    .headline {
+        width: 30rem;
+
+        h1 {
+            @include hero;
+        }
+
+        p {
+            @include bodyM;
+            color: $secondary;
+            line-height: 1.8;
+            margin-top: 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        span {
+            font-weight: 300;
+        }
+
+        @include px1024 {
+            width: 20.5rem;
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        @include px576 {
+            width: 100%;
+
+            h1 {
+                width: 16rem;
+                font-size: 1.75rem;
+            }
+
+            p {
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    .bg__left {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-60%, -50%);
+        z-index: -1;
+        width: 100%;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        gap: 0.5rem;
+        background-color: transparent;
+        color: #fff;
+        @include bodyS;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: darken($color: $secondary, $amount: 40%);
+            border-radius: 50%;
+            transition: all 0.2s ease-in-out;
+        }
+
+        @include px425 {
+            margin-top: 2rem;
+        }
+
+        &:hover {
+            transition: all 0.2s ease-in-out;
+
+            svg {
+                transform: translateX(0.25rem);
+            }
+        }
+    }
+
+    .details {
+        display: flex;
+        margin-top: 4rem;
+        gap: 2rem;
+
+        @include px425 {
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+    }
+
+    .details > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .details > div > p:not(:nth-child(n + 2)) {
+        font-size: 0.75rem;
+        color: $secondary;
+        letter-spacing: 1px;
+    }
+
+    .details > div > p:nth-child(n + 2) {
+        @include bodyL;
+        font-weight: 600;
+
+        @include px425 {
+            font-size: 1.25rem;
+        }
+    }
+
+    .details > div:nth-child(3) > p:last-child {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}
+
+.right {
+    .hero__right {
+        width: 100%;
+    }
+}

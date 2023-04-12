@@ -1,0 +1,64 @@
+@import "@/styles/helpers";
+
+.page__headline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+}
+
+.title_front {
+    @include h1;
+    font-weight: 700;
+    margin-top: auto;
+
+    @include px1024 {
+        font-size: 2rem;
+    }
+}
+
+.title_back {
+    position: absolute;
+    top: 50%;
+    left: -3.5rem;
+    transform: translateY(-55%);
+    font-size: 6.25rem;
+    font-weight: 700;
+    opacity: 0.06;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+
+    @include px1024 {
+        font-size: 4.5rem;
+        left: -1.5rem;
+    }
+
+    @include px576 {
+        font-size: 3.5rem;
+        left: -1rem;
+    }
+}
+
+.p__wrapper {
+    p {
+        @include bodyM;
+        color: $secondary;
+        width: 26rem;
+        line-height: 1.8;
+        transition: all 0.3s ease-in-out;
+
+        @include px1200 {
+            width: 100%;
+        }
+
+        @include px1024 {
+            font-size: 1rem;
+        }
+    }
+}

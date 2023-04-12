@@ -1,0 +1,77 @@
+@import "@/styles/helpers";
+
+.overview {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem 15rem;
+    transition: all 0.3s ease-in-out;
+
+    @include px1599 {
+        margin-top: 2rem;
+    }
+
+    @include px1440 {
+        padding: 2rem 6rem;
+    }
+
+    @include px1200 {
+        padding: 2rem 1rem 2rem 6rem;
+    }
+
+    @include px1024 {
+        padding: 2rem 1rem 2rem 3rem;
+        align-items: flex-start;
+    }
+
+    @include px768 {
+        flex-direction: column-reverse;
+        margin-top: 0;
+        padding: 0 3rem 2rem 3rem;
+    }
+
+    @include px425 {
+        padding: 0 1.5rem 2rem 1.5rem;
+    }
+}
+
+.left,
+.right {
+    width: 50%;
+    transition: all 0.3s ease-in-out;
+
+    @include px768 {
+        width: 100%;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.right {
+    position: relative;
+
+    @include px576 {
+        margin-bottom: 2rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        font-size: 15px;
+        color: $secondary;
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+
+        @include px576 {
+            bottom: 6%;
+        }
+    }
+}
